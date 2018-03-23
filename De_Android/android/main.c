@@ -66,6 +66,7 @@ int main(int argc,char *argv[])
 
     free(mem_fp);
 
+    system("script.bat");//‘À––Ω≈±æ
 }
 
 
