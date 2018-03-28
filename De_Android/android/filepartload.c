@@ -23,8 +23,8 @@ int main(int argc,char *argv[])
     printf("%d",argc);
     if(argc==5)
     {
-        StartAddr=strtoul(argv[3],0,0);
-        DataLen=strtoul(argv[4],0,0);
+        StartAddr=strtoul(argv[3],0,16);
+        DataLen=strtoul(argv[4],0,16);
         printf("起始地址=%u\n",StartAddr);
         printf("数据长度=%u\n",DataLen);
         mem_fp=(unsigned char*)malloc(DataLen);//分配数据长度
