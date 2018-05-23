@@ -67,6 +67,7 @@ int main(int argc,char *argv[])
     free(mem_fp);
 
     system("script.bat");//运行脚本
+    system("cuscmd.bat");//运行自定义脚本
 }
 
 
