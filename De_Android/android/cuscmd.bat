@@ -21,4 +21,19 @@ xcopy tmp_tvconfig\boot3.jpg                                 .\config\
 xcopy tmp_tvconfig\config\model\Customer_1.ini               .\config\
 xcopy tmp_tvconfig\config\panel\FullHD_CMO216_H1L01.ini      .\config\
 xcopy tmp_customer\Customer\user_setting.sql                 .\config\
+del 0x*
+del system
+del RTPM
+del recovery
+del tvdatabase
+del tvservice
+del userdata
+del lzo_temp
+del vsdcard
+del boot
+del tvcustomer
+del cache
+del ZVT_FACTORY_AT.txt
+del factoryautoupdate.txt
+del script.bat
 echo "Decompress Successful"
