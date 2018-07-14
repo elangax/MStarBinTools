@@ -27,7 +27,6 @@ int main(int argc,char *argv[])
     fseek(fp,0,SEEK_SET);
     fread(mem_fp,1,file_size,fp);
     fclose(fp);
-    printf("FILE SIZE: %ld\n",file_size);
     do
     {
         pos++;
@@ -45,6 +44,9 @@ int main(int argc,char *argv[])
     Script_fp=fopen("script.bat","wb");
     fwrite(mem_fp,pos,1,Script_fp);
     fclose(Script_fp);
+    CRC_value = *((unsigned long *)(mem_fp+file_size - FULL_FILE_CRC_OFFSET));
+    printf("FILE_SIZE: %lX\n",file_size);
+    printf("  BIN_CRC:%lX\n",CRC_value);
     free(mem_fp);
 
     system("script.bat");
